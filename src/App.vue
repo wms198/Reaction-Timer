@@ -1,6 +1,11 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal :header="header" :text="text" theme="sale" />
+  <p>Welcome...</p>
+  <div v-if="showModal"> 
+    <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/>
+  </div>
+  <button @click="toggleModal">Open modal</button>
+  
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
 </template>
@@ -15,20 +20,21 @@ export default {
     return {
       title: 'My First Vue App :)',
       header: 'Sign uo for the Giveaway!',
-      text: 'Grab your ninja swag for half price!'
+      text: 'Grab your ninja swag for half price!',
+      showModal: false
     }
   },
   methods: {
-    handleClick() {
-      console.log(this.$refs.name)
-      this.$refs.name.classList.add("active")
-      this.$refs.name.focus()
+    toggleModal() {
+      this.showModal = !this.showModal
+      }
     }
   }
-}
 
 
-// Props: crossing parent component to a child compnent
+
+// Emitting Custom Events - 触发的自定义事件
+// Custom Event: can be fired from a component and then it can be listen to from the parent component - 自定义事件：可由组件触发，然后由父组件监听
 </script>
 
 <style>
