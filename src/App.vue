@@ -4,7 +4,7 @@
   <div v-if="showModal"> 
     <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/>
   </div>
-  <button @click="toggleModal">Open modal</button>
+  <button @click.alt="toggleModal">Open modal(option/alt)</button>
   
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
@@ -33,8 +33,9 @@ export default {
 
 
 
-// Emitting Custom Events - 触发的自定义事件
+// Emitting Custom Events - 触发的自定义事件(Tutorial 5)
 // Custom Event: can be fired from a component and then it can be listen to from the parent component - 自定义事件：可由组件触发，然后由父组件监听
+// Click Event Modifiers(Tutorial 5)
 </script>
 
 <style>
