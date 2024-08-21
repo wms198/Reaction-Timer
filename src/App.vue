@@ -1,15 +1,19 @@
 <template>
   <h1>{{ title }}</h1>
-  <input type="text" ref="name">
-  <button @click="handleClick">click me</button>
+  <Modal />
+  <!-- <input type="text" ref="name">
+  <button @click="handleClick">click me</button> -->
 </template>
 
 <script>
+import Modal from './components/Modal.vue'
+
 export default {
   name: 'App',
+  components: { Modal }, 
   data() {
     return {
-      title: 'Ma First Vue App :)'
+      title: 'My First Vue App :)'
     }
   },
   methods: {
@@ -20,6 +24,9 @@ export default {
     }
   }
 }
+
+
+// Mutiple Components
 </script>
 
 <style>
@@ -37,3 +44,4 @@ h1 {
   padding-bottom: 10px;
 }
 </style>
+
