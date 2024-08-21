@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal />
+  <Modal :header="header" :text="text" theme="sale" />
   <!-- <input type="text" ref="name">
   <button @click="handleClick">click me</button> -->
 </template>
@@ -13,7 +13,9 @@ export default {
   components: { Modal }, 
   data() {
     return {
-      title: 'My First Vue App :)'
+      title: 'My First Vue App :)',
+      header: 'Sign uo for the Giveaway!',
+      text: 'Grab your ninja swag for half price!'
     }
   },
   methods: {
@@ -26,7 +28,7 @@ export default {
 }
 
 
-// Mutiple Components
+// Props: crossing parent component to a child compnent
 </script>
 
 <style>
