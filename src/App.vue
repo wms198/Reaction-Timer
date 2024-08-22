@@ -55,7 +55,7 @@ export default {
 // Custom Event: can be fired from a component and then it can be listen to from the parent component - 自定义事件：可由组件触发，然后由父组件监听
 // Click Event Modifiers(Tutorial 5)
 // Slot - 插槽(Tutorial 5): is really useful for passing custom templates into components
-// Using Teleport - 使用远程传送
+// Build a Reaction Timer Game
 </script>
 
 <style>
